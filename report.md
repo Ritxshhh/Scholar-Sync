@@ -298,28 +298,10 @@ Seven API modules wrap the Axios client with clean function signatures:
 
 ## 8. Design Patterns
 
-### Patterns Used
-
 | Pattern | Where | Description |
 |---|---|---|
-| **MVC** | Server-wide | Routes → Controllers → Models separation |
-| **Repository (implicit)** | Controllers | Mongoose models act as repositories |
-| **Middleware Chain** | `app.ts` | Express middleware pipeline for cross-cutting concerns |
 | **Factory** | `signToken` / `verifyToken` | JWT creation/verification abstracted |
-| **Provider (React Context)** | `AuthProvider` | Dependency injection for auth state |
-| **Route Guard** | `ProtectedRoute` | Client-side access control |
-| **Interceptor** | Axios client | Request/response transformation |
 | **Singleton** | Database connection | Single `connectDB()` call at startup |
-| **Seed/Fixture** | `seed.ts` | Comprehensive data seeding for development |
-
-### Patterns Missing
-
-| Pattern | Recommendation |
-|---|---|
-| **Service Layer** | Controllers mix business logic and data access — extract services |
-| **DTO/Validation Layer** | Input/output transformation and validation should be explicit |
-| **Error classes** | Custom error classes instead of inline `res.status().json()` |
-| **Repository pattern** | Abstract Mongoose operations behind an interface for testability |
 
 ---
 
@@ -334,20 +316,6 @@ Seven API modules wrap the Axios client with clean function signatures:
 - **Comprehensive seed data**: 330-line seed script creates realistic demo data (7 courses, 42 modules, 7 assignments, 6 library resources)
 - **Slug-based routing**: All public-facing entities support both ID and slug lookup
 - **Flexible queries**: Course/assignment/library controllers support filtering, search, and pagination
-
-### 9.2 Issues Found
-
-> **IMPORTANT**: These issues represent real bugs or technical debt that should be addressed:
-
-| Issue | Location | Description |
-|---|---|---|
-| **Double DB connection** | `app.ts` + `server.ts` | `connectDB()` is called in both `app.ts` (import-time) and `server.ts` (startup). When `server.ts` imports `app`, the first call fires immediately. The `await connectDB()` in `server.ts` triggers a second connection attempt. |
-| **Tailwind double-loading** | `GlobalStyles.jsx` | Tailwind CSS is loaded **both** via Vite plugin (`@tailwindcss/vite` in `package.json`) and CDN script injection in `GlobalStyles.jsx`. This creates conflicts and bloat. |
-| **Dynamic import in controller** | `assignment.controller.ts` | `await import('../models/Course')` used inside request handler instead of top-level import — likely to avoid circular dependency but creates runtime overhead on every request |
-| **Unsafe `any` casts** | Multiple controllers | `(c._id as any).toString()`, `const assignment: any = submission.assignmentId`, `filter: any = {}` — type safety is weakened |
-| **No 404 page** | `App.jsx` | No catch-all route for undefined paths |
-| **No loading/error states** | Frontend pages | No shared loading skeleton or error boundary component |
-| **Mixed API organization** | `dashboard.js` | Enrollment and submission functions are in `dashboard.js` instead of their own modules |
 
 ---
 
