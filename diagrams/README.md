@@ -14,12 +14,8 @@ ScholarSync is a full-stack Learning Management System built as a System Design 
 | 02 | [Class Diagram](./02_class_diagram.md) | UML Class | Complete object-oriented class hierarchy with interfaces, abstract classes, enums, and design pattern implementations |
 | 03 | [ER Diagram](./03_er_diagram.md) | Entity-Relationship | MongoDB data model with 18 collections, all relationships, cardinalities, and indexing strategy |
 | 04 | [Sequence Diagrams](./04_sequence_diagrams.md) | UML Sequence | 10 detailed interaction diagrams covering login, signup, SSO, enrollment, submission, grading, library, dashboard, module progress, and notifications |
-| 05 | [Activity Diagrams](./05_activity_diagrams.md) | UML Activity | 7 workflow diagrams with decision branches for login, enrollment, submission, grading, library access, dashboard loading, and GPA calculation |
-| 06 | [Architecture Diagram](./06_architecture_diagram.md) | Component / Architecture | Full system architecture (client → API → service → repository → DB), middleware pipeline, 30+ API routes, deployment architecture, and backend folder structure |
-| 07 | [State Machine Diagrams](./07_state_machine_diagrams.md) | UML State Machine | 7 lifecycle diagrams for assignments, submissions, enrollments, user accounts, library resources, notifications, and grade calculation |
-| 08 | [Design Patterns](./08_design_patterns.md) | Pattern Documentation | 7 design patterns with class diagrams, pseudocode, and explicit SOLID/OOP mapping: Factory, Strategy, Observer, Repository, Singleton, MVC, Decorator |
-| 09 | [Data Flow Diagrams](./09_data_flow_diagrams.md) | DFD (Level 0-2) | 3-level DFDs showing context, major processes, and detailed submission/GPA flows, plus a complete data dictionary |
-| 10 | [Component Diagram](./10_component_diagram.md) | UML Component | Frontend component hierarchy, backend package architecture, dependency matrix, interaction flows, and dependency injection overview |
+| 05 | [Architecture Diagram](./06_architecture_diagram.md) | Component / Architecture | Full system architecture (client → API → service → repository → DB), middleware pipeline, 30+ API routes, deployment architecture, and backend folder structure |
+| 06 | [Design Patterns](./08_design_patterns.md) | Pattern Documentation | 7 design patterns with class diagrams, pseudocode, and explicit SOLID/OOP mapping: Factory, Singleton |
 
 ---
 
