@@ -49,12 +49,7 @@ ScholarSync is a full-stack Learning Management System built as a System Design 
 | Pattern | Implementation | Diagram Reference |
 |---------|---------------|-------------------|
 | **Factory** | `ResourceFactory` creates `Textbook`/`Journal`/`VideoLecture` | [Class Diagram](./02_class_diagram.md), [Design Patterns](./08_design_patterns.md) |
-| **Strategy** | `GradeCalculator` with `WeightedGrading`/`CurveGrading`/`PassFail` | [Class Diagram](./02_class_diagram.md), [Design Patterns](./08_design_patterns.md) |
-| **Observer** | `NotificationService` with `EmailNotifier`/`InAppNotifier` | [Sequence #10](./04_sequence_diagrams.md), [Design Patterns](./08_design_patterns.md) |
-| **Repository** | `IRepository<T>` abstracts data access for all entities | [Architecture](./06_architecture_diagram.md), [Design Patterns](./08_design_patterns.md) |
 | **Singleton** | `Database` connection manager | [Design Patterns](./08_design_patterns.md) |
-| **MVC** | React (View) → Express Controllers → Mongoose Models | [Architecture](./06_architecture_diagram.md) |
-| **Decorator** | `AnnotatedResource` adds annotations to any library resource | [Design Patterns](./08_design_patterns.md) |
 
 ---
 
