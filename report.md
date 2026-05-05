@@ -397,42 +397,6 @@ Standard Vite build outputting to `dist/`. Dev server proxies `/api` to `http://
 
 ---
 
-## 12. Recommendations
-
-### Critical (Address Immediately)
-
-1. **Remove the fallback JWT secret** — require `JWT_SECRET` to be set or fail on startup
-2. **Apply Zod validation** to all route inputs — the `validate` middleware exists but is unused
-3. **Fix double database connection** — remove `connectDB()` from `app.ts` and keep only in `server.ts`
-4. **Remove CDN Tailwind** from `GlobalStyles.jsx` — the Vite plugin already handles it
-
-### High Priority
-
-5. **Add a 404 catch-all route** in `App.jsx`
-6. **Create shared `ErrorBoundary` and `LoadingSkeleton` components** for consistent UX
-7. **Extract a service layer** between controllers and models for testability
-8. **Add unit/integration tests** — currently **zero tests** exist in the entire project
-9. **Replace `any` types** with proper TypeScript interfaces throughout controllers
-
-### Medium Priority
-
-10. **Move enrollment/submission API functions** from `dashboard.js` to dedicated modules
-11. **Add server-side pagination** consistently to all list endpoints (currently only library has it)
-12. **Implement proper file upload** — current submission files are URL references with no upload handling
-13. **Add a refresh token flow** for better session management
-14. **Add response DTOs** to control exactly what data leaves the API
-15. **Make sidebar responsive** — currently uses fixed `ml-64` with no mobile support
-
-### Nice to Have
-
-16. Add `LICENSE` file
-17. Add API documentation (Swagger/OpenAPI)
-18. Implement WebSocket notifications for real-time updates
-19. Add dark mode toggle (design tokens are already Material Design compatible)
-20. Add student-to-student forum/discussion feature
-
----
-
 ## 13. Summary
 
 ScholarSync is a **well-structured, feature-complete LMS** with clean separation of concerns and a solid MongoDB schema design. The codebase is compact (~4,600 LOC) but delivers substantial functionality across 30+ API endpoints and 19 frontend pages.
