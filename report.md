@@ -397,7 +397,7 @@ Standard Vite build outputting to `dist/`. Dev server proxies `/api` to `http://
 
 ---
 
-## 13. Summary
+## 12. Summary
 
 ScholarSync is a **well-structured, feature-complete LMS** with clean separation of concerns and a solid MongoDB schema design. The codebase is compact (~4,600 LOC) but delivers substantial functionality across 30+ API endpoints and 19 frontend pages.
 
