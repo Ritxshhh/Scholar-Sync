@@ -17,12 +17,7 @@
 
 ### Design Patterns Used
 - **Factory Pattern**: `ResourceFactory` creates `Textbook`, `Journal`, or `VideoLecture` based on type
-- **Strategy Pattern**: `IGradingStrategy` allows swappable grading algorithms (weighted, curve, pass/fail)
-- **Observer Pattern**: `NotificationService` observes deadline and grade events
-- **Repository Pattern**: `IRepository<T>` abstracts data access for all entities
 - **Singleton Pattern**: `DatabaseConnection`, `ConfigManager`
-- **MVC Pattern**: Overall architecture separating Model, View (React), Controller (Express routes)
-- **Decorator Pattern**: `AnnotatedResource` adds annotation capability to any library resource
 
 ---
 
@@ -159,9 +154,5 @@ classDiagram
 | Pattern | Where Applied | Purpose |
 |---------|--------------|---------|
 | **Factory** | `ResourceFactory` | Creates `Textbook`, `Journal`, or `VideoLecture` without exposing creation logic |
-| **Strategy** | `GradeCalculator` + `IGradingStrategy` | Allows swapping grading algorithms (weighted, curve) at runtime |
-| **Observer** | `NotificationService` + `INotificationObserver` | Decouples event producers from notification channels |
-| **Repository** | `IRepository<T>` | Abstracts MongoDB data access behind a clean interface |
 | **Singleton** | `DatabaseConnection` (not shown) | Ensures single DB connection pool |
-| **MVC** | Overall architecture | React views, Express controllers, Mongoose models |
-| **Decorator** | Annotations on `LibraryResource` | Adds annotation/bookmark features to any resource type |
+
