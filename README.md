@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=📚+ScholarSync+LMS;🎓+Smart+Learning+Platform;⚡+Built+for+Students+%26+Instructors" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=ScholarSync+LMS;Smart+Learning+Platform;Built+for+Students+%26+Instructors" alt="Typing SVG" />
 
 <br/>
 
