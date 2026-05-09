@@ -1,166 +1,169 @@
-# ScholarSync
+<div align="center">
 
-ScholarSync is a full-stack Learning Management System (LMS) with separate student and instructor experiences.  
-It includes authentication, course management, assignments, submissions, grading, library resources, and role-based dashboards.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=📚+ScholarSync+LMS;🎓+Smart+Learning+Platform;⚡+Built+for+Students+%26+Instructors" alt="Typing SVG" />
 
----
+<br/>
 
-## Features
+[![MIT License](https://img.shields.io/badge/License-MIT-6366f1?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-LTS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com)
 
-- **Role-based authentication**
-  - Student signup/login
-  - Instructor signup/login
-  - Authenticated profile endpoint (`/auth/me`)
-- **Student workflows**
-  - Browse/search/filter courses
-  - Enroll in courses
-  - Track module completion progress
-  - View assignments and submission status
-  - Submit assignment work
-  - View grades and GPA
-  - Browse/search library resources
-  - Save resources and track reading progress
-  - Student dashboard with upcoming assignments and recent grades
-- **Instructor workflows**
-  - Create/update/delete courses
-  - Add modules and announcements to courses
-  - Create/update/delete assignments
-  - View submissions
-  - Grade submissions
-  - Create library resources
-  - Instructor dashboard with teaching stats
-- **Backend protections**
-  - JWT authentication
-  - Role-based authorization middleware
-  - API rate limiting
-  - Centralized error handling
-- **Design artifacts**
-  - System/UML documentation available in `diagrams/`
+[![Vite](https://img.shields.io/badge/Vite-⚡-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Express](https://img.shields.io/badge/Express.js-API-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)
+[![JWT](https://img.shields.io/badge/JWT-Auth-FB015B?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io)
+
+<br/>
+
+> 🎓 **ScholarSync** is a full-stack Learning Management System with dedicated student & instructor portals, real-time grading, assignment tracking, and a rich library — all secured with role-based JWT auth.
+
+</div>
 
 ---
 
-## Tech Stack
+## 🌟 Feature Highlights
 
-### Frontend (`client/`)
-- React 19
-- Vite
-- React Router
-- Axios
-- Tailwind CSS v4 (`@tailwindcss/vite`)
-- Framer Motion
-- Lucide React
+<table>
+<tr>
+<td width="50%">
 
-### Backend (`server/`)
-- Node.js + Express
-- TypeScript
-- MongoDB + Mongoose
-- JWT (`jsonwebtoken`)
-- Password hashing (`bcryptjs`)
-- Validation library (`zod`)
-- CORS + Express Rate Limit
+### 🧑‍🎓 Student Experience
+- 🔐 Secure signup & login
+- 📖 Browse, search & filter courses
+- ✅ Enroll & track module progress
+- 📝 Submit assignments & view grades
+- 📊 GPA calculator
+- 📚 Library with saved resources & reading progress
+- 🗂️ Personal dashboard with upcoming work
 
-### Tooling
-- ESLint (frontend)
-- TypeScript compiler (`tsc`) (backend)
+</td>
+<td width="50%">
+
+### 🧑‍🏫 Instructor Experience
+- 🏗️ Create / update / delete courses
+- 📦 Add modules & announcements
+- 📋 Manage assignments & view submissions
+- ✏️ Grade student work
+- 📁 Publish library resources
+- 📈 Instructor analytics dashboard
+
+</td>
+</tr>
+</table>
+
+### 🔒 Backend Protections
+
+| Shield | Description |
+|--------|-------------|
+| 🔑 JWT Authentication | Stateless, secure token-based auth |
+| 🛡️ Role-Based Authorization | Middleware enforcing student/instructor roles |
+| 🚦 API Rate Limiting | Guards against abuse via Express Rate Limit |
+| ⚠️ Centralized Error Handling | Consistent, structured error responses |
 
 ---
 
-## Project Structure (tree)
+## 🛠️ Tech Stack
+
+<div align="center">
+
+### 🖥️ Frontend
+
+[![React](https://skillicons.dev/icons?i=react)](https://react.dev)
+[![Vite](https://skillicons.dev/icons?i=vite)](https://vitejs.dev)
+[![TailwindCSS](https://skillicons.dev/icons?i=tailwind)](https://tailwindcss.com)
+[![TypeScript](https://skillicons.dev/icons?i=ts)](https://www.typescriptlang.org)
+
+`React 19` · `Vite` · `React Router` · `Axios` · `Tailwind CSS v4` · `Framer Motion` · `Lucide React`
+
+### ⚙️ Backend
+
+[![Node.js](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org)
+[![Express](https://skillicons.dev/icons?i=express)](https://expressjs.com)
+[![MongoDB](https://skillicons.dev/icons?i=mongodb)](https://mongodb.com)
+[![TypeScript](https://skillicons.dev/icons?i=ts)](https://www.typescriptlang.org)
+
+`Node.js` · `Express` · `TypeScript` · `MongoDB + Mongoose` · `JWT` · `bcryptjs` · `Zod` · `CORS`
+
+</div>
+
+---
+
+## 📁 Project Structure
 
 ```text
 Scholar-Sync/
-├── client/
-│   ├── src/
-│   │   ├── api/                # Frontend API wrappers (auth, courses, assignments, etc.)
-│   │   ├── components/         # Shared UI components and route guards
-│   │   ├── context/            # Auth context
-│   │   ├── layouts/            # Public/student/instructor layouts
-│   │   ├── pages/              # Student + public pages
-│   │   └── pages/instructor/   # Instructor pages
-│   ├── package.json
-│   └── vite.config.js
-├── server/
-│   ├── src/
-│   │   ├── config/             # DB connection
-│   │   ├── controllers/        # Route handlers/business logic
-│   │   ├── middleware/         # Auth, RBAC, error handling
-│   │   ├── models/             # Mongoose models
-│   │   ├── routes/             # API route definitions
-│   │   ├── seed/               # Database seeding script
-│   │   ├── utils/              # JWT utils
-│   │   ├── app.ts              # Express app configuration
-│   │   └── server.ts           # Server bootstrap
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── vercel.json
-├── diagrams/                   # System design/UML documentation
-└── package-lock.json
+├── 🖥️  client/
+│   └── src/
+│       ├── 🌐 api/                # Frontend API wrappers
+│       ├── 🧩 components/         # Shared UI + route guards
+│       ├── 🔄 context/            # Auth context
+│       ├── 🗂️  layouts/            # Public / student / instructor layouts
+│       ├── 📄 pages/              # Student & public pages
+│       └── 📄 pages/instructor/   # Instructor pages
+│
+├── ⚙️  server/
+│   └── src/
+│       ├── 🗄️  config/             # DB connection
+│       ├── 🎮 controllers/        # Route handlers & business logic
+│       ├── 🛡️  middleware/         # Auth, RBAC, error handling
+│       ├── 📦 models/             # Mongoose schemas
+│       ├── 🛤️  routes/             # API route definitions
+│       ├── 🌱 seed/               # Database seeding script
+│       ├── 🔧 utils/              # JWT utilities
+│       ├── 🚀 app.ts              # Express app config
+│       └── 🏁 server.ts           # Server bootstrap
+│
+└── 📐 diagrams/                   # System design / UML docs
 ```
 
 ---
 
-## Architecture Overview
+## 🏗️ Architecture
 
-ScholarSync follows a client-server architecture:
-
-1. **React client** renders role-specific UI and calls API modules in `client/src/api/*`.
-2. **Axios client** attaches JWT from local storage and handles unauthorized responses.
-3. **Express API** exposes REST endpoints under `/api/*`.
-4. **Middleware pipeline** applies CORS, JSON parsing, rate limiting, authentication, and role checks.
-5. **Controllers** implement business logic.
-6. **Mongoose models** persist data in MongoDB.
-
-```text
-React (Vite) → Axios API client → Express routes → Middleware (auth/RBAC) → Controllers → Mongoose → MongoDB
+```
+🖥️  React (Vite)
+      ↓
+📡  Axios API Client  ──── attaches JWT from localStorage
+      ↓
+🛤️  Express Routes  (/api/*)
+      ↓
+🛡️  Middleware Pipeline  (CORS → JSON → Rate Limit → Auth → RBAC)
+      ↓
+🎮  Controllers  (business logic)
+      ↓
+📦  Mongoose Models
+      ↓
+🗄️  MongoDB
 ```
 
 ---
 
-## Installation
+## ⚡ Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 
-- Node.js (LTS recommended)
-- npm
-- MongoDB instance (local or Atlas)
+![Node.js](https://img.shields.io/badge/Node.js-LTS-339933?style=flat-square&logo=nodedotjs)
+![npm](https://img.shields.io/badge/npm-latest-CB3837?style=flat-square&logo=npm)
+![MongoDB](https://img.shields.io/badge/MongoDB-local%20or%20Atlas-47A248?style=flat-square&logo=mongodb)
 
-### 1) Clone and install dependencies
+### 1️⃣ Clone & Install
 
 ```bash
 git clone <your-repo-url>
 cd Scholar-Sync
 
-cd server
-npm install
+# Install backend dependencies
+cd server && npm install
 
-cd ../client
-npm install
+# Install frontend dependencies
+cd ../client && npm install
 ```
 
-### 2) Configure environment variables
+### 2️⃣ Configure Environment Variables
 
-Create env files as described below.
-
-### 3) Run backend and frontend
-
-Use separate terminals:
-
-```bash
-cd server
-npm run dev
-```
-
-```bash
-cd client
-npm run dev
-```
-
----
-
-## Environment Variables
-
-### Server (`server/.env`)
-
+**`server/.env`**
 ```env
 MONGODB_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>
 JWT_SECRET=change_this_secret
@@ -169,153 +172,207 @@ PORT=5001
 CLIENT_URL=http://localhost:5173
 ```
 
-> Notes:
-> - `MONGODB_URI` is required by `server/src/config/db.ts`.
-> - `PORT` defaults to `5000` if not set.
-> - `CLIENT_URL` is used by CORS.
-> - `JWT_SECRET` has a fallback in code, but set it explicitly for real use.
-
-### Client (`client/.env`)
-
+**`client/.env`**
 ```env
 VITE_API_BASE_URL=http://localhost:5001/api
 ```
 
-If omitted, the client defaults to `/api`.
+> 💡 `PORT` defaults to `5000` if unset — set it to `5001` to match the Vite proxy config.
 
----
-
-## Usage
-
-- Open frontend at `http://localhost:5173`
-- API health check: `GET /api/health`
-- Seed demo data (optional):
+### 3️⃣ Run the App
 
 ```bash
-cd server
-npm run seed
+# Terminal 1 — Backend
+cd server && npm run dev
+
+# Terminal 2 — Frontend
+cd client && npm run dev
 ```
 
-Seed script prints sample credentials in console (student + instructor).
+🌐 Open **http://localhost:5173** in your browser.
+
+### 🌱 Seed Demo Data *(optional)*
+
+```bash
+cd server && npm run seed
+# Prints sample student + instructor credentials to console
+```
 
 ---
 
-## Scripts / Commands
-
-### Client (`client/package.json`)
-
-- `npm run dev` — start Vite dev server
-- `npm run build` — production build
-- `npm run preview` — preview built app
-- `npm run lint` — run ESLint
-
-### Server (`server/package.json`)
-
-- `npm run dev` — start API with `ts-node-dev`
-- `npm run build` — compile TypeScript to `dist/`
-- `npm start` — run compiled server
-- `npm run seed` — seed database
-
----
-
-## API Endpoints
+## 🗺️ API Reference
 
 Base URL: `/api`
 
-### Health
-- `GET /health`
+<details>
+<summary>🏥 <strong>Health</strong></summary>
 
-### Auth
-- `POST /auth/signup`
-- `POST /auth/login`
-- `POST /auth/instructor/signup`
-- `POST /auth/instructor/login`
-- `GET /auth/me` (auth required)
+| Method | Endpoint | Auth |
+|--------|----------|------|
+| `GET` | `/health` | None |
 
-### Courses
-- `GET /courses` (auth)
-- `GET /courses/instructor/mine` (instructor)
-- `GET /courses/:idOrSlug` (auth)
-- `POST /courses` (instructor)
-- `PUT /courses/:id` (instructor)
-- `DELETE /courses/:id` (instructor)
-- `POST /courses/:id/modules` (instructor)
-- `POST /courses/:id/announcements` (instructor)
+</details>
 
-### Enrollments
-- `GET /enrollments` (student)
-- `POST /enrollments` (student)
-- `PUT /enrollments/:id/module-complete` (student)
+<details>
+<summary>🔐 <strong>Auth</strong></summary>
 
-### Assignments
-- `GET /assignments` (auth)
-- `GET /assignments/:idOrSlug` (auth)
-- `POST /assignments` (instructor)
-- `PUT /assignments/:id` (instructor)
-- `DELETE /assignments/:id` (instructor)
+| Method | Endpoint | Auth |
+|--------|----------|------|
+| `POST` | `/auth/signup` | None |
+| `POST` | `/auth/login` | None |
+| `POST` | `/auth/instructor/signup` | None |
+| `POST` | `/auth/instructor/login` | None |
+| `GET` | `/auth/me` | ✅ Required |
 
-### Submissions
-- `POST /submissions` (student)
-- `GET /submissions` (instructor)
-- `GET /submissions/my` (student)
+</details>
 
-### Grades
-- `GET /grades` (student)
-- `GET /grades/gpa` (student)
-- `POST /grades` (instructor)
+<details>
+<summary>📚 <strong>Courses</strong></summary>
 
-### Library
-- `GET /library` (auth)
-- `GET /library/recent` (student)
-- `GET /library/saved` (student)
-- `POST /library/saved` (student)
-- `PUT /library/progress` (student)
-- `GET /library/:idOrSlug` (auth)
-- `POST /library` (instructor)
+| Method | Endpoint | Role |
+|--------|----------|------|
+| `GET` | `/courses` | 🔐 Auth |
+| `GET` | `/courses/instructor/mine` | 🧑‍🏫 Instructor |
+| `GET` | `/courses/:idOrSlug` | 🔐 Auth |
+| `POST` | `/courses` | 🧑‍🏫 Instructor |
+| `PUT` | `/courses/:id` | 🧑‍🏫 Instructor |
+| `DELETE` | `/courses/:id` | 🧑‍🏫 Instructor |
+| `POST` | `/courses/:id/modules` | 🧑‍🏫 Instructor |
+| `POST` | `/courses/:id/announcements` | 🧑‍🏫 Instructor |
 
-### Dashboard
-- `GET /dashboard/overview` (student)
-- `GET /dashboard/instructor` (instructor)
+</details>
+
+<details>
+<summary>📋 <strong>Enrollments</strong></summary>
+
+| Method | Endpoint | Role |
+|--------|----------|------|
+| `GET` | `/enrollments` | 🧑‍🎓 Student |
+| `POST` | `/enrollments` | 🧑‍🎓 Student |
+| `PUT` | `/enrollments/:id/module-complete` | 🧑‍🎓 Student |
+
+</details>
+
+<details>
+<summary>📝 <strong>Assignments & Submissions</strong></summary>
+
+| Method | Endpoint | Role |
+|--------|----------|------|
+| `GET` | `/assignments` | 🔐 Auth |
+| `GET` | `/assignments/:idOrSlug` | 🔐 Auth |
+| `POST` | `/assignments` | 🧑‍🏫 Instructor |
+| `PUT` | `/assignments/:id` | 🧑‍🏫 Instructor |
+| `DELETE` | `/assignments/:id` | 🧑‍🏫 Instructor |
+| `POST` | `/submissions` | 🧑‍🎓 Student |
+| `GET` | `/submissions` | 🧑‍🏫 Instructor |
+| `GET` | `/submissions/my` | 🧑‍🎓 Student |
+
+</details>
+
+<details>
+<summary>🏆 <strong>Grades</strong></summary>
+
+| Method | Endpoint | Role |
+|--------|----------|------|
+| `GET` | `/grades` | 🧑‍🎓 Student |
+| `GET` | `/grades/gpa` | 🧑‍🎓 Student |
+| `POST` | `/grades` | 🧑‍🏫 Instructor |
+
+</details>
+
+<details>
+<summary>📖 <strong>Library</strong></summary>
+
+| Method | Endpoint | Role |
+|--------|----------|------|
+| `GET` | `/library` | 🔐 Auth |
+| `GET` | `/library/recent` | 🧑‍🎓 Student |
+| `GET` | `/library/saved` | 🧑‍🎓 Student |
+| `POST` | `/library/saved` | 🧑‍🎓 Student |
+| `PUT` | `/library/progress` | 🧑‍🎓 Student |
+| `GET` | `/library/:idOrSlug` | 🔐 Auth |
+| `POST` | `/library` | 🧑‍🏫 Instructor |
+
+</details>
+
+<details>
+<summary>📊 <strong>Dashboard</strong></summary>
+
+| Method | Endpoint | Role |
+|--------|----------|------|
+| `GET` | `/dashboard/overview` | 🧑‍🎓 Student |
+| `GET` | `/dashboard/instructor` | 🧑‍🏫 Instructor |
+
+</details>
 
 ---
 
-## Deployment
+## 📜 Scripts
 
-### Backend
+### 🖥️ Client
 
-`server/vercel.json` is configured for Vercel Node deployment using `src/app.ts`.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | ⚡ Start Vite dev server |
+| `npm run build` | 📦 Production build |
+| `npm run preview` | 👁️ Preview production build |
+| `npm run lint` | 🔍 Run ESLint |
 
-### Frontend
+### ⚙️ Server
 
-Frontend is a Vite app and can be deployed to any static host (Vercel/Netlify/etc.) after `npm run build`.
-
-When deploying, ensure:
-- Client API base URL points to deployed backend (`VITE_API_BASE_URL`)
-- Server CORS `CLIENT_URL` matches deployed frontend origin
-
----
-
-## Contributing
-
-1. Fork the repo
-2. Create a feature branch
-3. Make changes in `client/` and/or `server/`
-4. Run lint/build locally
-5. Open a pull request with clear scope and test notes
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | 🔄 Start with ts-node-dev (hot reload) |
+| `npm run build` | 🏗️ Compile TypeScript → `dist/` |
+| `npm start` | 🚀 Run compiled server |
+| `npm run seed` | 🌱 Seed the database |
 
 ---
 
-## License
+## 🚀 Deployment
 
-No `LICENSE` file was detected in the repository.  
-Add a license file (for example, MIT) if you want explicit open-source usage terms.
+### Backend — Vercel
+`server/vercel.json` is pre-configured for Vercel Node.js deployment using `src/app.ts`.
+
+### Frontend — Static Host
+Deploy the Vite build output to any static host (Vercel / Netlify / Cloudflare Pages):
+```bash
+cd client && npm run build
+```
+
+> ⚠️ Ensure `VITE_API_BASE_URL` points to the deployed backend and the server's `CLIENT_URL` matches your frontend origin.
 
 ---
 
-## Known Issues / Roadmap
+## 🤝 Contributing
 
-### Detectable issues
-- `client/vite.config.js` proxies `/api` to `http://localhost:5001`, while backend defaults to port `5000` unless `PORT` is set. Configure `PORT=5001` (or update proxy/env) to avoid local mismatch.
+```
+1. 🍴 Fork the repo
+2. 🌿 Create a feature branch
+3. 🛠️  Make your changes in client/ and/or server/
+4. ✅ Run lint + build locally
+5. 📬 Open a pull request with clear scope and test notes
+```
 
-### Roadmap signals
-- No explicit roadmap/TODO/FIXME markers were detected in source files.
+---
+
+## ⚠️ Known Issues
+
+> 🐛 `client/vite.config.js` proxies `/api` → `http://localhost:5001`, but the backend defaults to port `5000` unless `PORT` is set explicitly.
+> **Fix:** Add `PORT=5001` to `server/.env`.
+
+---
+
+## 📐 Diagrams
+
+System design and UML documentation are available in the [`diagrams/`](./diagrams) directory.
+
+---
+
+<div align="center">
+
+Made with ❤️ by the ScholarSync Team
+
+![Wave](https://capsule-render.vercel.app/api?type=waving&color=6366F1&height=100&section=footer)
+
+</div>
