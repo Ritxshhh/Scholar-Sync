@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import GlobalStyles from "./components/GlobalStyles";
@@ -63,6 +63,9 @@ function App() {
           <Route path="/instructor/assignments" element={<ProtectedRoute roles={["instructor"]}><InstructorDashboardLayout><InstructorAssignmentsPage /></InstructorDashboardLayout></ProtectedRoute>} />
           <Route path="/instructor/submissions" element={<ProtectedRoute roles={["instructor"]}><InstructorDashboardLayout><InstructorSubmissionsPage /></InstructorDashboardLayout></ProtectedRoute>} />
           <Route path="/instructor/library" element={<ProtectedRoute roles={["instructor"]}><InstructorDashboardLayout><InstructorLibraryPage /></InstructorDashboardLayout></ProtectedRoute>} />
+
+          {/* Catch-all: redirect unmatched routes to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
@@ -70,3 +73,4 @@ function App() {
 }
 
 export default App;
+
